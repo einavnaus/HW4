@@ -1,0 +1,4 @@
+a. 3-4 hours
+b. we think that this algorithm is very efective for searches in large databeses, so it can be useful for government offices and streamline their work.
+c. with a few code changes, the program can run every few minutes or hours in a cycle. It means that the program will always run in the background, and will be executed every x time.
+In order not to create duplicates searches, we can put the address in the "already read" file, and in any iteration we will add the scanned address to it (at the end of the iteration). Each time we will only work with addresses the didnt appear in "already read".
