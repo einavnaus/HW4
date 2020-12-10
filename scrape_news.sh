@@ -1,7 +1,7 @@
 #!/bin/bash
 wget -q -nv https://www.ynetnews.com/category/3082 >/dev/null 2>/dev/null  
-grep -o -E ""https:\/\/www\.ynetnews\.com\/article\/[a-zA-Z0-9]+"" 3082 | 
-sort -u | sed 's/"//g' > links
+grep -o -E '(")https://www.ynetnews.com/article/[a-zA-Z0-9]{9}(#autoplay)?(")'\
+ 3082 | sort -u | sed 's/"//g' | sed 's/#autoplay//g' > links
 touch results.csv
 wc -l <links >> results.csv
 while read -r line; do
